@@ -45,11 +45,16 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.search),
-            onPressed: () {},
-          )
+        actions: [
+          Visibility(
+            child: IconButton(
+              icon: Icon(_selectedIndex == 0
+                  ? Icons.search
+                  : _selectedIndex == 1 ? Icons.edit : null),
+              onPressed: () {},
+            ),
+            visible: _selectedIndex == 0 || _selectedIndex == 1 ? true : false,
+          ),
         ],
       ),
       body: Center(
