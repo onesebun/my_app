@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'LINE DEMO'),
+      home: MyHomePage(title: 'LIME DEMO'),
     );
   }
 }
