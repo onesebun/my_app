@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
-// import 'package:my_app/widgets/friends_list.dart';
 import '../widgets/bottom_nav_bar.dart';
+
 import './friends_screen.dart';
+import './chat_screen.dart';
+import './posts_screen.dart';
+import './call_screen.dart';
+import './wallet_screen.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key}) : super(key: key);
@@ -19,10 +23,10 @@ class _MyHomePageState extends State<MyHomePage> {
   }
   final List<Widget> _widgetOptions = <Widget>[
     FriendsScreen(),
-    PlaceholderWidget(Colors.black),
-    PlaceholderWidget(Colors.white),
-    PlaceholderWidget(Colors.deepOrange),
-    PlaceholderWidget(Colors.green)
+    ChatScreen(),
+    PostsScreen(),
+    CallScreen(),
+    WalletScreen()
   ];
 
   @override

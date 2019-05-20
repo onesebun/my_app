@@ -16,11 +16,13 @@ class FriendsScreen extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
           icon: Icon(Icons.settings),
+          onPressed: () {},
         ),
         title: Text('好友'),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.person_add),
+            onPressed: () {},
           )
         ],
       ),
