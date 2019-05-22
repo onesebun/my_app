@@ -5,6 +5,7 @@ import '../widgets/friends_list.dart';
 import '../widgets/user_profile.dart';
 
 import './settings_screen.dart';
+import './add_friend_screen.dart';
 
 class FriendsScreen extends StatelessWidget {
   FriendsScreen();
@@ -40,7 +41,14 @@ class FriendsScreen extends StatelessWidget {
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.person_add),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => AddFriendScreen(),
+                      fullscreenDialog: true),
+                );
+              },
             )
           ],
         ),
