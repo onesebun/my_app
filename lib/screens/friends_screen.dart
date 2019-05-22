@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../model/post.dart';
 import '../widgets/friends_list.dart';
@@ -20,11 +21,19 @@ class FriendsScreen extends StatelessWidget {
           leading: IconButton(
             icon: Icon(Icons.settings),
             onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) {
-                    return SettingsScreen();
-                  },
-                  fullscreenDialog: true));
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => SettingsScreen(),
+                    fullscreenDialog: true),
+              );
+              // Navigator.push(
+              //   context,
+              //   CupertinoPageRoute(
+              //     fullscreenDialog: true,
+              //     builder: (context) => SettingsScreen()
+              //   )
+              // );
             },
           ),
           title: Text('好友'),
