@@ -6,10 +6,18 @@ class UserProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 60,
       alignment: FractionalOffset.center,
-      color: Colors.greenAccent,
-      child: Text('test'),
+      child: ListTile(
+          contentPadding: EdgeInsets.all(20),
+          leading: Icon(Icons.perm_identity),
+          title: Text('奕圻(17)'),
+          subtitle: Column(
+              // mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text('小丸子的同學'),
+                Text('K33P'),
+              ])),
     );
   }
 }
