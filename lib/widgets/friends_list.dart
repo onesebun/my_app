@@ -29,15 +29,17 @@ class FriendsList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
+    return Column(
       children: <Widget>[
         UserProfile(),
         ServicesList(),
-        ListView.builder(
-          shrinkWrap: true,
-          itemCount: posts.length,
-          itemBuilder: _listItemBuilber,
-        )
+        Expanded(
+          child: ListView.builder(
+            shrinkWrap: true,
+            itemCount: posts.length,
+            itemBuilder: _listItemBuilber,
+          ),
+        ),
       ],
     );
   }

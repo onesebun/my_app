@@ -52,6 +52,16 @@ class FriendsScreen extends StatelessWidget {
             )
           ],
         ),
+        // body: Container(
+        //   child: Column(
+        //     mainAxisAlignment: MainAxisAlignment.start,
+        //     children: <Widget>[
+        //       Flexible(
+        //         child: FriendsList(),
+        //       ),
+        //     ],
+        //   ),
+        // )
         body: Container(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -61,6 +71,7 @@ class FriendsScreen extends StatelessWidget {
               ),
             ],
           ),
-        ));
+        )
+        );
   }
 }
